@@ -29,10 +29,12 @@ struct ContentView: View {
                         .cornerRadius(15)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 20)
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     
                     Divider()
                         .background(.black)
                         .padding(.vertical, 20)
+                    
                     Image(systemName: "swift")
                         .resizable()
                         .scaledToFit()
@@ -41,13 +43,15 @@ struct ContentView: View {
                         .cornerRadius(15)
                         .padding(.horizontal, 35)
                         .padding(.vertical, 20)
-                    
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+
                     Divider()
                         .background(.black)
                         .padding(.vertical, 20)
                     
                     Text(messageString)
                         .font(.title2)
+                        .bold()
                         .fontWeight(.medium)
                         .minimumScaleFactor(0.5)
                         .foregroundStyle(.indianOcean)
@@ -57,6 +61,7 @@ struct ContentView: View {
                         .background(.puebloSand)
                         .cornerRadius(15)
                         .padding(.horizontal, 10)
+            
                     Divider()
                         .background(.black)
                         .padding(.vertical, 20)
@@ -67,6 +72,11 @@ struct ContentView: View {
                             messageString = "You Are Awesome!"
                             
                         }
+                        .buttonStyle(.bordered)
+                        .shadow(radius: 25)
+
+                        
+                        
                     }
                     
                 }
