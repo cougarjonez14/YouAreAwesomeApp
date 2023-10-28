@@ -8,7 +8,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var messageString = "You Are Loved"
+@State private var messageString = "You Are Loved"
     
     var body: some View {
         ZStack {
@@ -69,7 +69,14 @@ struct ContentView: View {
                     HStack{
                         
                         Button("Press Me"){
-                            messageString = "You Are Awesome!"
+                            let message1 = "You Are Awesome!"
+                            let message2 = "You Are Great!"
+                            
+                            if messageString == message1 {
+                                messageString = message2
+                            } else {
+                                messageString = message1
+                            }
                             
                         }
                         .buttonStyle(.bordered)

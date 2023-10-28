@@ -26,6 +26,7 @@ struct NamasteView: View {
             Text("Namaste")
                 .font(.title)
                 .fontWeight(.black)
+                .kerning(3)
                 .foregroundColor(.gold)
                 .multilineTextAlignment(.center)
                 .padding()
