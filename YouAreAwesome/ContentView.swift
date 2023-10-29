@@ -9,6 +9,7 @@ import SwiftUI
 struct ContentView: View {
     
 @State private var messageString = "You Are Loved"
+@State private var imageName = ""
     
     var body: some View {
         ZStack {
@@ -35,7 +36,7 @@ struct ContentView: View {
                         .background(.black)
                         .padding(.vertical, 20)
                     
-                    Image(systemName: "swift")
+                    Image(imageName)
                         .resizable()
                         .scaledToFit()
                         .foregroundStyle(.indianOcean)
@@ -78,7 +79,9 @@ struct ContentView: View {
 //                                messageString = message1
 //                            }
                             // Change to a Ternary Operator
-                            messageString = (messageString == message1) ? message2 : message1
+                            messageString = (messageString == message1 ? message2 : message1)
+                            imageName = (imageName == "Cassette" ? "Disc" : "Cassette")
+                            
                             
                         }
                         .buttonStyle(.bordered)
